@@ -25,6 +25,10 @@ Através da análise dos dados de navegação do usuário, nossa inteligência a
 # Entre em contato
 Entre em contato conosco pelo e-mail **smartsellers.contato@gmail.com** para saber mais sobre como podemos ajudar a impulsionar seu negócio rumo ao sucesso!
 
+# Arquitetura
+
+<img align="center" alt="Diagrama-UML" src="https://github.com/augustopdro/SmartSellers-DBE/blob/master/arquitetura.jpg?raw=true">
+
 ---
 
 ## Endpoints
