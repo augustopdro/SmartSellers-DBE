@@ -1,6 +1,14 @@
 # Smartsellers: Elevando a Experiência do Cliente e Aumentando a Conversão de Vendas 
 
 Bem-vindo à Smartsellers, a sua parceira em soluções avançadas de chatbot baseadas na poderosa API do ChatGPT. Nosso objetivo é fornecer às empresas um chatbot inteligente e personalizado, focado em empresas que oferecem soluções, com o propósito de aprimorar a experiência do cliente e impulsionar a conversão de vendas.
+Integrantes do grupo:
+
+RM 93442 - Gabriel Hitoshi Furone Yokogawa
+RM 93150 - Guilherme Martins Nascimento
+RM 93205 - Luis Fernando Nascimento de Oliveira
+RM 94990 - Pedro Augusto Pereira Viana   
+RM 95800 - Yasmin Cabral Dias
+
 
 # Visão Geral
 
@@ -114,15 +122,14 @@ Entre em contato conosco pelo e-mail **smartsellers.contato@gmail.com** para sab
 | nome | String | sim | é o nome do produto
 | descricao | String | sim | é uma descrição que explica exatamente como funciona o produto
 | preco | Double | sim | é o preço do produto
-| quantidade | Integer | sim | é a quantidade disponível do produto
+
 
 **Exemplo de corpo do request**
 ```js
 {
 	"nome": "godfather action figure",
 	"descricao": "Em homenagem ao icônico filme americano de máfia, The GodFather, a Action Figure lançou um colecionável especial em homenagem a Vito Corleone.",
-  "preco": "2500.0",
-  "quantidade": "12"
+    "preco": "2500.0"
 }
 ```
 
@@ -146,14 +153,14 @@ Entre em contato conosco pelo e-mail **smartsellers.contato@gmail.com** para sab
 | nome | String | é o nome do produto
 | descricao | String | é uma descrição que explica exatamente como funciona o produto
 | preco | Double | é o preço do produto
-| quantidade | Integer | é a quantidade disponível do produto
+
 
 ```js
 {
 	"nome": "godfather action figure",
 	"descricao": "Em homenagem ao icônico filme americano de máfia, The GodFather, a Action Figure lançou um colecionável especial em homenagem a Vito Corleone.",
-  "preco": "2500.0",
-  "quantidade": "12"
+    "preco": "2500.0"
+
 }
 ```
 
@@ -177,8 +184,7 @@ Entre em contato conosco pelo e-mail **smartsellers.contato@gmail.com** para sab
 {
 	"nome": "godfather action figure",
 	"descricao": "Em homenagem ao icônico filme americano de máfia, The GodFather, a Action Figure lançou um colecionável especial em homenagem a Vito Corleone.",
-  "preco": "4500.0",
-  "quantidade": "8"
+    "preco": "4500.0",
 }
 ```
 
