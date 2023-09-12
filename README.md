@@ -20,6 +20,7 @@ Para executar a aplicação, basta clonar o repositório em sua máquina e execu
 
 ## Teste os endpoints por aqui
 - Postman: https://www.postman.com/altimetry-astronaut-37339768/workspace/alimentech/collection/23202593-1f7b59a0-b414-465c-abaa-9aaa09dabb14?action=share&creator=23202593
+No postman, já tem json's salvos com exemplos de como deve ser feita a requisição.
 
 # Inteligência Artificial a Serviço das Vendas
 
