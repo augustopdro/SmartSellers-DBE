@@ -3,11 +3,11 @@
 Bem-vindo à Smartsellers, a sua parceira em soluções avançadas de chatbot baseadas na poderosa API do ChatGPT. Nosso objetivo é fornecer às empresas um chatbot inteligente e personalizado, focado em empresas que oferecem soluções, com o propósito de aprimorar a experiência do cliente e impulsionar a conversão de vendas.
 Integrantes do grupo:
 
-RM 93442 - Gabriel Hitoshi Furone Yokogawa
-RM 93150 - Guilherme Martins Nascimento
-RM 93205 - Luis Fernando Nascimento de Oliveira
-RM 94990 - Pedro Augusto Pereira Viana   
-RM 95800 - Yasmin Cabral Dias
+-  RM 93442 - Gabriel Hitoshi Furone Yokogawa
+-  RM 93150 - Guilherme Martins Nascimento
+-  RM 93205 - Luis Fernando Nascimento de Oliveira
+-  RM 94990 - Pedro Augusto Pereira Viana   
+-  RM 95800 - Yasmin Cabral Dias
 
 
 # Visão Geral
