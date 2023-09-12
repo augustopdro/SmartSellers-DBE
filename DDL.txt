@@ -1,0 +1,71 @@
+-- MySQL Workbench Forward Engineering
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `smartsellers` DEFAULT CHARACTER SET utf8 ;
+USE `smartsellers` ;
+
+-- -----------------------------------------------------
+-- Table `smartsellers`.`T_SS_USUARIO`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `smartsellers`.`T_SS_USUARIO` (
+  `id_usuario` INT NOT NULL,
+  `email_usuario` VARCHAR(255) NOT NULL,
+  `nome_usuario` VARCHAR(50) NOT NULL,
+  `telefone_usuario` VARCHAR(11) NOT NULL,
+  PRIMARY KEY (`id_usuario`),
+  UNIQUE INDEX `id_usuario_UNIQUE` (`id_usuario` ASC) VISIBLE)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `smartsellers`.`T_SS_PRODUTOS`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `smartsellers`.`T_SS_PRODUTOS` (
+  `id_produto` INT NOT NULL,
+  `id_usuario` INT NOT NULL,
+  `nome_produto` VARCHAR(50) NOT NULL,
+  `descricao` VARCHAR(255) NOT NULL,
+  `preco` DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (`id_produto`),
+  INDEX `fk_T_SS_PRODUTOS_T_SS_USUARIO1_idx` (`id_usuario` ASC) VISIBLE,
+  UNIQUE INDEX `id_produto_UNIQUE` (`id_produto` ASC) VISIBLE,
+  CONSTRAINT `fk_T_SS_PRODUTOS_T_SS_USUARIO1`
+    FOREIGN KEY (`id_usuario`)
+    REFERENCES `smartsellers`.`T_SS_USUARIO` (`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `smartsellers`.`T_SS_NAVEGACAO`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `smartsellers`.`T_SS_NAVEGACAO` (
+  `id_usuario` INT NOT NULL,
+  `id_sessao` INT NOT NULL,
+  `id_produto` INT NOT NULL,
+  `timestamp` DATETIME NOT NULL,
+  `tempo_gasto` INT NOT NULL,
+  `vizualizacoes_pagina` INT NOT NULL,
+  `acoes` VARCHAR(50) NOT NULL,
+  INDEX `fk_T_SS_NAVEGACAO_T_SS_USUARIO1_idx` (`id_usuario` ASC) VISIBLE,
+  CONSTRAINT `fk_T_SS_NAVEGACAO_T_SS_USUARIO1`
+    FOREIGN KEY (`id_usuario`)
+    REFERENCES `smartsellers`.`T_SS_USUARIO` (`id_usuario`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
