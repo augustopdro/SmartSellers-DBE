@@ -14,6 +14,13 @@ Integrantes do grupo:
 
 Na Smartsellers, acreditamos que a chave para o sucesso nas vendas está na interação eficaz entre as empresas e seus clientes. Com base nessa premissa, desenvolvemos uma solução inovadora que combina a inteligência artificial do ChatGPT com a análise de dados de navegação do usuário. Dessa forma, somos capazes de criar um chatbot altamente inteligente e automatizado, que aborda proativamente os clientes em potencial, oferecendo uma experiência personalizada e relevante.
 
+## Deploy
+
+Para executar a aplicação, basta clonar o repositório em sua máquina e executar o SmartSellersApplication
+
+## Teste os endpoints por aqui
+- Postman: https://www.postman.com/altimetry-astronaut-37339768/workspace/alimentech/collection/23202593-1f7b59a0-b414-465c-abaa-9aaa09dabb14?action=share&creator=23202593
+
 # Inteligência Artificial a Serviço das Vendas
 
 Nosso chatbot vai além de simplesmente responder perguntas e fornecer informações básicas. Ele é capaz de iniciar e manter conversas envolventes com os clientes, compreendendo suas necessidades e explicando como a solução oferecida pela empresa pode atender a essas necessidades específicas.
