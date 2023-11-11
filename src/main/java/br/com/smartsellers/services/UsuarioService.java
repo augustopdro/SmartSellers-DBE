@@ -28,12 +28,13 @@ public class UsuarioService {
 
 	public Usuario cadastrar(Usuario usuario)
     {
-        log.info("Cadastrando usuario: " + usuario);
+		log.info("Cadastrando usuario: " + usuario);
 
-		String codigoDeAcesso = gerarCodigoDeAcesso(usuario.getId());
-		usuario.setCodigoDeAcesso(codigoDeAcesso);
+		Usuario savedUsuario = repository.save(usuario);
+		String codigoDeAcesso = gerarCodigoDeAcesso(savedUsuario.getId());
+		savedUsuario.setCodigoDeAcesso(codigoDeAcesso);
 
-		return repository.save(usuario);
+		return repository.save(savedUsuario);
     }
 
 
@@ -50,30 +51,29 @@ public class UsuarioService {
 
 	public LoginResponseDTO logar(String codigoDeAcesso)
 	{
-		/*
-			Nas próximas atualizações do projeto, usaremos JWT ou alguma outra estratégia
-			de acordo com os conteúdos que forem vistos na aula. No momento, optamos em realizar
-			o login usando o código de acesso e retornar o id, e com esse ID a aplicação
-			que consome tem acesso aos demais endpoints que necessitam do id do usuário
-		*/
 		log.info("Validando código informado");
+		log.info(codigoDeAcesso);
 
 		Usuario usuario = repository
 				.buscarPorCodigo(codigoDeAcesso)
 				.orElseThrow(() -> new RestUnauthorizedException("Código inválido"));
 
-		long acesso = usuario.getId();
+		String acesso = usuario.getCodigoDeAcesso();
 		return new LoginResponseDTO(acesso);
-	} 
+	}
 
 
-	private String gerarCodigoDeAcesso(Long userId)
-	{
-		String seed = userId.toString() + "_" + UUID.randomUUID().toString();
+	private String gerarCodigoDeAcesso(Long userId) {
+		String seed = userId.toString() + System.currentTimeMillis();
+		String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		SecureRandom random = new SecureRandom(seed.getBytes());
-		byte[] bytes = new byte[16];
-		random.nextBytes(bytes);
-		UUID uuid = UUID.nameUUIDFromBytes(bytes);
-		return uuid.toString();
+		StringBuilder code = new StringBuilder();
+
+		for (int i = 0; i < 8; i++) {
+			int index = random.nextInt(characters.length());
+			code.append(characters.charAt(index));
+		}
+
+		return code.toString();
 	}
 }

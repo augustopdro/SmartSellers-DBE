@@ -28,24 +28,18 @@ public class Produto {
     @Column(nullable = false)
     private String descricao;
 
-    @NotNull
-    @NotBlank
-    @Column(nullable = false)
-    private Double preco;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "usuario_id")
     @JsonIgnore
     private Usuario usuario;
 
-    public Produto(String nome, String descricao, Double preco) {
+    public Produto(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
-        this.preco = preco;
     }
 
     @Override
     public String toString() {
-        return "Nome: " + nome + "\nDescricao: " + descricao + "\nPreco: " + preco;
+        return "Nome: " + nome + "\nDescricao: " + descricao;
     }
 }

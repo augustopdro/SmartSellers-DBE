@@ -1,3 +1,3 @@
 package br.com.smartsellers.dtos;
 
-public record LoginResponseDTO(long id) {}
+public record LoginResponseDTO(String codigoAcesso) {}

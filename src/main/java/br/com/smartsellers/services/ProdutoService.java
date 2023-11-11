@@ -36,7 +36,6 @@ public class ProdutoService {
         var produtoExistente = recuperarProduto(id);
         produtoExistente.setNome(produto.getNome());
         produtoExistente.setDescricao(produto.getDescricao());
-        produtoExistente.setPreco(produto.getPreco());
 
         return atualizarProduto(produtoExistente);
     }
