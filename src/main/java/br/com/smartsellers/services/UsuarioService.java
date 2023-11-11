@@ -56,7 +56,7 @@ public class UsuarioService {
 
 		Usuario usuario = repository
 				.buscarPorCodigo(codigoDeAcesso)
-				.orElseThrow(() -> new RestUnauthorizedException("Código inválido" + codigoDeAcesso));
+				.orElseThrow(() -> new RestUnauthorizedException("Código inválido"));
 
 		String acesso = usuario.getCodigoDeAcesso();
 		return new LoginResponseDTO(acesso);
