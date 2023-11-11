@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'smartsellers'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_33E19B666B724889ACD166A397D0B7EE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4BCD48EE837145048F6E8349160219A0 }}
           package: '*.jar'
