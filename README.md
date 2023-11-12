@@ -43,7 +43,7 @@ Entre em contato conosco pelo e-mail **smartsellers.contato@gmail.com** para sab
 
 # Arquitetura
 
-<img align="center" alt="Diagrama-UML" src="https://github.com/augustopdro/SmartSellers-DBE/blob/master/ArquiteturaRecursos.jpeg?raw=true">
+<img align="center" alt="Diagrama-UML" src="https://github.com/augustopdro/SmartSellers-DBE/blob/master/ArquiteturaSmartsellers.jpg?raw=true">
 
 ---
 
